@@ -3,3 +3,79 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face{
+    font-family:"Lato" ;
+    src:url("../Font-family/LatoTitle/Lato-Regular.ttf");
+    font-weight:100;
+    font-style: normal;
+}
+@font-face{
+    font-family:"Roboto" ;
+    src:url("../Font-family/RobotoContent/Roboto-Regular.ttf");
+    font-weight:100;
+    font-style: normal;
+}
+body{
+    font-family:"Roboto";
+}
+h1,h2,h3{
+    font-family:"Lato";
+}
+/*************HEADER*******************/
+header nav ul{
+    color: white;
+    background-color:black;
+    position:fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw; 
+    height: 5vh;
+    z-index: 1;
+}
+    header nav ul li{
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+header img:nth-child(2){
+    width: 100vw;
+    height: 97vh;
+    border-bottom-right-radius: 25%;
+}
+header img:nth-child(3){
+    width: 10vw;
+    height: 20vh;
+    border-radius:50%;
+    position: absolute;
+    top: 15vh;
+    left:10vw;
+}
+header #description{
+    position: absolute;
+    top:40vh;
+    left: 5vw;
+    color: rgb(216, 209, 209);
+    font-size: 2em;
+}
+    header #description .bold{
+        font-weight: bold;
+        color:white
+    }    
+/*************BODY*******************/
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.profil{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+    .profil .kind_profil{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 20vw;
+    }
