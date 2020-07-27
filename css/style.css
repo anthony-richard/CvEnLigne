@@ -1,8 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 @font-face{
     font-family:"Lato" ;
     src:url("../Font-family/LatoTitle/Lato-Regular.ttf");
@@ -15,21 +10,26 @@
     font-weight:100;
     font-style: normal;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family:"Roboto";
 }
 h1,h2,h3{
     font-family:"Lato";
+    font-weight: bold;
 }
 /*************HEADER*******************/
 header nav ul{
-    color: white;
     background-color:black;
     position:fixed;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100vw; 
+    width: 99vw; 
     height: 5vh;
     z-index: 1;
 }
@@ -38,44 +38,442 @@ header nav ul{
         font-weight: bold;
         font-size: 1.3em;
     }
+        header nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        #Profil,#Competences,#Experiences,#Formations,#Interet,#Contact{
+            padding:4%;
+        }
 header img:nth-child(2){
-    width: 100vw;
+    width: 99vw;
     height: 97vh;
     border-bottom-right-radius: 25%;
 }
 header img:nth-child(3){
     width: 10vw;
-    height: 20vh;
+    height: 22vh;
     border-radius:50%;
     position: absolute;
     top: 15vh;
     left:10vw;
 }
-header #description{
+header #MyDescriptionBg{
     position: absolute;
     top:40vh;
     left: 5vw;
-    color: rgb(216, 209, 209);
+    color:rgba(255, 255, 255, 0.808);
     font-size: 2em;
 }
-    header #description .bold{
+    header #MyDescriptionBg .bold{
         font-weight: bold;
-        color:white
+        color:white;
     }    
 /*************BODY*******************/
 .title{
     display: flex;
     justify-content: center;
-    margin: 2%;
+    font-size: 1.6em;
 }
-.profil{
+/*------------Part Profil------------*/
+.MyProfil{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
 }
-    .profil .kind_profil{
+    .MyProfil .kind_profil{
         display: flex;
         flex-direction: column;
         text-align: center;
-        width: 20vw;
+        width: 25vw;
     }
+        .MyProfil .kind_profil i{
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+/*--------------------Couleur icons----------------*/
+        .MyProfil .kind_profil .fa-lightbulb{
+            color: rgb(250, 71, 71);
+        }
+            .MyProfil .kind_profil .fa-lightbulb:hover{
+                color: white;
+                background:linear-gradient(45deg, rgb(247, 54, 54),rgb(221, 112, 78));
+            }
+        .MyProfil .kind_profil .fa-comments{
+            color: rgb(84, 84, 231);
+        }
+            .MyProfil .kind_profil .fa-comments:hover{
+                color: white;
+                background:linear-gradient(45deg, rgb(73, 54, 247),rgb(116, 124, 233));
+            }
+        .MyProfil .kind_profil .fa-magic{
+            color:rgb(230, 227, 50);
+        }
+            .MyProfil .kind_profil .fa-magic:hover{
+                color: white;
+                background:linear-gradient(45deg, rgb(229, 252, 20),rgb(255, 238, 141));
+                
+            }
+        .MyProfil .kind_profil p{
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+/*------------Part Competences-------------*/
+.BgBlack{
+    background-color: black;
+    color: white;
+}
+
+/*-------Part Bancassurance------*/
+#bankInsurance{
+    display: flex;
+}
+    #bankInsurance .leftContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:50vw;
+        height:50vh;
+    }
+        #bankInsurance .leftContent ul{
+            list-style-type: square;
+        }
+            #bankInsurance .leftContent ul li{
+            margin-top:15px;
+            font-size:1.2em;
+            }
+        
+    #bankInsurance img{
+        width: 50vw;
+        height: auto;
+    }
+/*--------Part Info--------*/
+#Info{
+    display: flex;
+}
+    #Info img{
+        width: 49vw;   
+        height: auto; 
+    }
+    #Info .rightContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 50vh;
+    }
+        #Info .rightContent ul{
+            list-style-type: square;
+        }
+            #Info .rightContent ul li{
+                margin-top: 15px;
+                font-size: 1.2em;
+            }
+/*-------Part Language-------*/
+#language{
+    display: flex;
+}
+    #language .leftContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 50vh;
+    }
+        #language .leftContent ul{
+            list-style-type: square;
+        }
+            #language .leftContent ul li{
+                margin-top: 15px;
+                font-size: 1.2em;
+            }
+    #language img{
+        width: 50vw;
+        height: auto;
+    }
+/*---------Part Experience-----------*/
+
+.intro {
+    background: rgb(192, 192, 192);
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* TIMELINE
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .timeline ul {
+    background: white;
+  }
+  
+  .timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: silver;
+  }
+  
+  .timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+  }
+  
+  .timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background: #F45B69;
+  }
+  
+  .timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    left: 45px;
+  }
+  
+  .timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+    
+  }
+  
+  .timeline ul li:nth-child(even) div {
+    left: -439px;
+  }
+  
+  .timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #F45B69;
+    
+  }
+  
+  time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  
+  /* EFFECTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  /*.timeline ul li::after {
+    transition: background .5s ease-in-out;
+    
+  }
+  
+  .timeline ul li.in-view::after {
+    background: #F45B69;
+    
+  }
+  
+  .timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+    
+  }
+  
+  .timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+  }
+  
+  .timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+    
+  }*/
+  
+  
+/*--------Images----------*/
+.timeline img{
+    width: 10vw;
+    height: auto;
+}
+
+/*---------Part Formation---------*/
+#Formations{
+    display: flex;
+    justify-content: center;
+    background-color: silver;
+    width: 100vw;
+    margin-top: 30px;
+}
+#TimelineFormation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #TimelineFormation .leftContent{
+        width: 25vw;
+        height: 25vw;
+        text-align: justify;
+    }
+    #TimelineFormation ul{
+       list-style-type: none;
+    }
+        #TimelineFormation ul li{
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+    #TimelineFormation img{
+        width: 50vw;
+        height: auto;
+    } 
+/*----------Centres d'intérets--------------*/
+
+#Interet{
+    padding: 1%;
+    height: 10vh;
+}
+#logoInt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    background-color: rgb(255, 255, 255);
+    width: 90vw;
+    margin: auto;    
+}
+    #logoInt i{
+        font-size: 1.8em;
+        text-align: center;
+    }
+/*-------Color interests--------*/
+#logoInt .fa-gamepad{
+    color: rgb(61, 118, 194);
+}
+    #logoInt .fa-gamepad:hover{
+        transform: scale(1.50);
+    }
+#logoInt .fa-music{
+    color: purple;
+}
+    #logoInt .fa-music:hover{
+        transform: scale(1.50);
+    }
+#logoInt .fa-basketball-ball{
+    color: orange;
+}
+    #logoInt .fa-basketball-ball:hover{
+        transform: scale(1.50);
+    }
+#logoInt .fa-film{
+    color: black;
+}
+    #logoInt .fa-film:hover{
+        transform: scale(1.50); 
+    }
+#logoInt .fa-ghost{
+    color: blueviolet;
+}
+    #logoInt .fa-ghost:hover{
+        transform: scale(1.50);
+    }
+#logoInt .fa-utensils{
+    color: silver;
+}
+    #logoInt .fa-utensils:hover{
+        transform: scale(1.50);
+    }
+#logoInt i p{
+    font-size: 16px;
+    margin-top: 10px;
+    color: black;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* GENERAL MEDIA QUERIES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  @media screen and (max-width: 900px) {
+    .timeline ul li div {
+      width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+      left: -289px;
+      /*250+45-6*/
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline ul li {
+      margin-left: 20px;
+    }
+    .timeline ul li div {
+      width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+      left: 45px;
+    }
+    .timeline ul li:nth-child(even) div::before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent #F45B69 transparent transparent;
+    }
+  }
