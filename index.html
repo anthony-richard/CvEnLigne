@@ -31,7 +31,6 @@
     <body>
         <header>
         <!--Nav with unordered list, position fixed with a redirection on a text area-->
-        
             <nav>
               <ul>
                   <li><a href="#Profil">Profil</a></li>
@@ -39,14 +38,13 @@
                   <li><a href="#Experiences">Expériences</a></li>
                   <li><a href="#Formations">Formations</a></li>
                   <li><a href="#Interet">Centres d'intérets</a></li>
-                  <li><a href="#Contact">Contact</a></li>
               </ul>
             </nav>
         
         <!--Laptop in background, and my picture in front of -->
-            <img src="Images/Head/laptopred.jpg" alt="Ordinateur">
+            <img src="Images/Head/laptopred.jpg" alt="Ordinateur" id="backtop">
             <img src="Images/Head/anthony.jpg" alt="Ma photo">
-        
+        <!--Text under my picture-->
             <div id="MyDescriptionBg">
                 <span class="bold">Anthony RICHARD</span>
                 , 23 ans.
@@ -71,23 +69,22 @@
             <div class="kind_profil">
                 <i class="far fa-comments" alt="bulles de conversation"></i>
                 <h2>Relationnel:</h2>
-                <p>Avoir un sens du contact est primordial, je peux etre seul ou en équipe, je sais m'adapter et etre autonome. </p>
+                <p>Avoir un sens du contact est primordial, seul ou en équipe, je sais m'adapter et etre autonome. </p>
             </div>
             
             <div class="kind_profil">
-             <i class="far fa-magic" alt=" baguette magique"></i>
-             <h2>Dynamique:</h2>
+                <i class="far fa-magic" alt="baguette magique"></i>
+                <h2>Dynamique:</h2>
                 <p>S'investir pour réussir.</p>
             </div>
         </div>
         
         <!------------------Compétences----------------------->
-        
         <div class="title">
           <h1 id="Competences">Mes compétences:</h1>
         </div>
 
-        <div class="BgBlack">
+        <div class="Bgcolor">
             <div id="bankInsurance">
                 <div class="leftContent">
                     <h2>Dans le milieu de la Bancassurance:</h2>
@@ -99,13 +96,11 @@
                         <li>Maitrise des outils informatique chez Axa et Crédit agricole.</li>
                     </ul>
                 </div>  
-
-                <img src="Images/Competences/bank.jpg" alt="tirelire de la banque">
+                 <img src="Images/Competences/bank.jpg" alt="tirelire de la banque">
             </div>
 
             <div id="Info">
                 <img src="Images/Competences/devWeb.jpg" alt="Ecran avec langages html et css">
-                
                 <div class="rightContent">
                     <h2>Dans le domaine informatique:</h2>
                     <ul>
@@ -127,18 +122,14 @@
                         <li>Japonais en cours d'apprentissage. </li>
                     </ul>
                 </div>
-
                 <img src="Images/Competences/Jap.jpg" alt="photo japon, Torii">
             </div>  
         </div>
         <!----------------------Expériences------------------------->
+        <div class="title">
+            <h1 id="Experiences">Mes Expériences: &darr;</h1>
+        </div>
 
-        <section class="intro">
-            <div class="container">
-              <h1 id="Experiences">Mes Expériences: &darr;</h1>
-            </div>
-        </section>
-          
           <section class="timeline">
             <ul>
               <li>
@@ -176,18 +167,18 @@
         </div>
 
         <div id="TimelineFormation">
-          <div class="leftContent">
+            <div class="leftContent">
               <ul>
                   <li>2020 à 2021: Formation développeur web.</li>
                   <li>2017 à 2019: BTS Assurance.</li>
                   <li>2016 à 2017: Licence MIASHS.</li>
                   <li>2016: Bac stmg option Mercatique.</li>
               </ul>
-          </div>
+            </div>
         
-        <img src="Images/Formations/work.png">
+            <img src="Images/Formations/work.png">
         </div>
-        <!-----------------------Centres d'intérets------------------>
+        <!-------------------Centres d'intérets------------------>
         <div class="title">
             <h1 id="Interet">Mes centres d'intérets:</h1>
         </div>
@@ -200,16 +191,30 @@
             <i class="fas fa-ghost" alt="Paranormal, fantomes, horreur"><p>Paranormal, horreur.</p></i>
             <i class="fas fa-utensils" alt="La nourriture"><p>La nourriture.</p></i>
         </div>
+        <!-------------------Js for timeline-------------------->
+        <script type="text/javascript" src="Javascript/test.js"></script>
 
         <footer>
-           <h3>Réseaux sociaux:</h3> 
-           <a href="https://www.linkedin.com/in/anthony-richard-1361811aa/" target="_blank" alt="Linkedin"><i class="fab fa-linkedin"></i></a>
+            <div id="Ft">
+                <div id="socialNetwork">
+                    <h3>Réseaux sociaux:</h3> 
+                    <a href="https://www.linkedin.com/in/anthony-richard-1361811aa/" target="_blank" alt="Linkedin"><i class="fab fa-linkedin"></i></a>
+                </div>
 
-           <h3 id="Contact">Me contacter:</h3>
-           <i class="far fa-envelope" alt="Enveloppe"> Email: anthonyrichard55200@gmail.com.</i>
-           <i class="far fa-map-marker-alt" alt="Marqueur"> Où sur mon Linkedin.</i>
-
-           <p>&copy; 2020 | Anthony RICHARD | Tous droits réservés.</p>
+                <div id="contact">
+                    <h3>Me contacter:</h3>
+                    <i class="far fa-envelope" alt="Enveloppe"><p>Email: anthonyrichard55200@gmail.com.</p></i>
+                    <i class="far fa-map-marker-alt" alt="Marqueur"><p> Où sur mon Linkedin.</p></i>
+                </div>
+            </div>
+            <!----------------button bottom to top------------------------------>
+                <a href="#backtop">
+                    <button class="glow-on-hover">&UpArrow;</button>
+                </a> 
+            <!----------------------Copyright------------------------------->
+                <div id="cp">
+                    <p>&copy; 2020 | Anthony RICHARD | Tous droits réservés.</p>
+                </div>  
         </footer>
     </body>
 </html>
