@@ -32,7 +32,7 @@ header nav ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 99vw; 
+    width: 100%; 
     height: 5vh;
     z-index: 1;
 }
@@ -47,7 +47,7 @@ header nav ul{
         }
 /*----Img header----*/
 header img:nth-child(2){
-    width: 99vw;
+    width: 100%;
     height: 98vh;
     border-bottom-right-radius: 25%;
 }
@@ -322,12 +322,10 @@ time {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
     #TimelineFormation .leftContent{
-        width: 25vw;
+        width: auto;
         height: auto;
-        text-align: justify;
     }
     #TimelineFormation ul{
        list-style-type: none;
@@ -412,6 +410,8 @@ footer{
     width: auto;
     background-color: #131313;
     color: white;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
 }
     footer h3{
         margin-top: 10px;
@@ -445,8 +445,10 @@ footer{
                 font-size: 1.5em;
                 margin: 10px;
             }
-                footer #Ft #contact i p{
+                footer #Ft #contact i a{
                     font-size: 0.8em;
+                    text-decoration: none;
+                    color: white;
                 }
 /*---Copyright---*/
     footer #cp{
@@ -455,7 +457,7 @@ footer{
     }
         footer #cp p{
             border-top:solid 2px white;
-            width: 19vw;
+            width: auto;
         }
 /*------------Button bottom to the top--------------*/
 .glow-on-hover {
@@ -508,13 +510,18 @@ footer{
         top: 0;
         border-radius: 10px;
     }
-
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
-
+/*-Scroll Bar -*/
+::-webkit-scrollbar{
+    background-color:#f5f5f7;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #131313;;
+}
   /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*-------Tall laptop------*/
@@ -528,115 +535,84 @@ footer{
     header #MyDescriptionBg{
         font-size: 1.5em;
     }
-    /*-Copyright-*/
-    footer #cp p{
-        width: 26vw;
-    }
 }
 /*------Laptop-------*/
 @media only screen and (max-width:1200px){
-     /*-My Picture-*/
-     header img:nth-child(3){
-        width: 14vw;
+    /*-My Picture-*/
+    header img:nth-child(3){
+        width: 12vw;
+        height: 18vh;
     }
     /*-txt under my picture-*/
     header #MyDescriptionBg{
         font-size: 1.3em;
     }
-     /*-Profil-*/
+    /*-Part Profil-*/
     .MyProfil .kind_profil{
         width: 33vw;
     }
-     /*-Competence-*/
+    /*-Part Competences-*/
     #bankInsurance .leftContent{
         text-align: center;
     }
         #bankInsurance .leftContent ul{
             list-style-type: none;
         }
-    
     #Info .rightContent ul{
         list-style-type: none;
     }
     #language .leftContent ul{
         list-style-type: none;
     }
-    /*-Copyright-*/
-    footer #cp p{
-        width: 36vw;
-    }
 }
 /*--------Tall tablet, little computer-----------*/
 @media only screen and (max-width:992px){
+    /*-bg head-*/
+    header img:nth-child(2){
+        height: auto;
+    }
+    /*-My Picture-*/
+    header img:nth-child(3){
+        top:20vh;
+        width: 13vw;
+        height: 15vh;
+    }
+    /*-txt under my picture-*/
+    header #MyDescriptionBg{
+        top:38vh;
+        font-size: 1em;
+    }
+    /*-Part Profil-*/
+    .MyProfil .kind_profil{
+        font-size: 0.9em;
+    }
+    /*-Part Competences-*/
+    #bankInsurance .leftContent{
+        height: auto;
+    }
+    #bankInsurance img{
+        height: 40vh;
+    }
+    #Info img{
+        height: 40vh;
+        width: 50vw;
+    }
+    #Info .rightContent{
+        height: auto;
+    }
+    #language .leftContent{
+        height: auto;
+    }
+    #language img{
+        height: 40vh;
+    }
+    /*-button bottom to the top-*/
+    .glow-on-hover{
+        left: 90vw;
+    }
 }
-/*-----Tablet and tall smartphone--------*/
-@media only screen and (max-width:768px){
-}
-/*--------------Smartphone-------------*/
-@media only screen and (max-width:575px){
-}
-/*-------------Little Smartphone-----------*/
-@media only screen and (max-width:375px){
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media screen and (max-width: 900px) {
+/*------Animation Js Part Experiences-----*/
+@media screen and (max-width: 900px) {
     .timeline ul li div {
       width: 250px;
     }
@@ -645,8 +621,70 @@ footer{
       /*250+45-6*/
     }
   }
-  
-  @media screen and (max-width: 600px) {
+/*---------------Tablet----------------*/
+@media only screen and (max-width:768px){
+    /*-Nav-*/
+    header nav ul li{
+        font-size: 1em;
+    }
+    /*-My Picture-*/
+    header img:nth-child(3){
+        top:15vh;
+        width: 15vw;
+        height: 13vh;
+    }
+    /*-txt under my picture-*/
+    header #MyDescriptionBg{
+    top:30vh;
+    font-size: 0.9em;
+    }
+    /*-for all title h1-*/
+    .title{
+        font-size: 1.2em;
+    }
+        #Profil,#Competences,#Experiences,#Formations,#Interet{
+            height: 13vh;
+        }
+    /*-Part Profil-*/
+    .MyProfil{
+        flex-wrap: wrap;
+    }
+        .MyProfil .kind_profil{
+            margin-top: 15px;
+            width: 48%;
+        }
+    /*-Part Competences-*/
+    #bankInsurance .leftContent{
+        font-size: 0.9em;
+    }
+    #bankInsurance img{
+        height: 30vh;
+    }
+    #Info img{
+        height: 30vh;
+    }
+    #Info .rightContent{
+        font-size: 0.9em;
+    }
+    #language .leftContent{
+        font-size: 0.9em;
+    }
+    #language img{
+        height: 30vh; 
+    }
+    /*-Part formations-*/
+    #TimelineFormation ul li{
+        font-size: 1em;
+    }
+    /*-icons Part Interests-*/
+    #logoInt{
+        flex-wrap: wrap;
+        height: 40vh;
+        width: 50%;
+    }
+}
+/*------Animation Js Part Experiences-----*/
+@media screen and (max-width: 600px) {
     .timeline ul li {
       margin-left: 20px;
     }
@@ -662,3 +700,126 @@ footer{
       border-color: transparent #F45B69 transparent transparent;
     }
   }
+/*--------------Smartphone-------------*/
+@media only screen and (max-width:575px){
+    /*-Nav-*/
+    header nav{
+        display:none;
+    }
+    /*-My Picture-*/
+    header img:nth-child(3){
+        width: 16vw;
+        height: 11vh;
+        top:1vh;
+        left:4vw;
+    }
+    /*-txt under my picture-*/
+    header #MyDescriptionBg{
+        top:4vh;
+        left:30vw;
+        font-size: 1em;
+    }
+    /*-for all title-*/
+    .title{
+        font-size: 1.1em;
+    }
+        #Profil,#Competences,#Experiences,#Formations,#Interet{
+            height: 10vh;
+        }
+    /*-Part Profil-*/
+    .MyProfil .kind_profil{
+        width: 90%;
+    }
+    /*-Part Competences-*/
+    #bankInsurance{
+        justify-content: center;
+    }
+        #bankInsurance img{
+            display: none;
+        }
+        #bankInsurance h2{
+            width: 90vw;
+        }
+        #bankInsurance .leftContent ul li{
+            width: 90vw;
+        }
+    #Info{
+        justify-content: center;
+        text-align: center;
+    }
+        #Info img{
+            display: none;
+        }
+        #Info h2{
+            width:90vw;
+            margin-top: 10px;
+        }
+    #language{
+        justify-content: center;
+        text-align: center;
+    }
+        #language img{
+            display: none; 
+        }
+        #language h2{
+            margin-top: 10px;
+        }
+    /*-button bottom to the top-*/
+    .glow-on-hover{
+        display: none;
+    }
+    /*-copyright-*/
+    #cp{
+        margin-top: 10px;
+    }
+}
+/*-------------Little Smartphone-----------*/
+@media only screen and (max-width:375px){
+    /*-My Picture-*/
+    header img:nth-child(3){
+        width: 20vw;
+        height: 9vh;
+    }
+    /*-txt under my picture-*/
+    header #MyDescriptionBg{
+        top:2vh;
+        font-size: 0.9em;
+    }
+    /*-for all title h1-*/
+    .title{
+        font-size: 0.9em;
+    }
+    /*-all h2-*/
+    h2{
+        font-size: 1.2em;
+    }
+    /*-Part Profil-*/
+    .MyProfil .kind_profil p{
+        font-size: 1em;
+    }
+    /*-Part Competences-*/
+    #bankInsurance .leftContent ul li,
+    #Info .rightContent ul li,
+    #language .leftContent ul li
+    {
+        font-size: 1em;
+        width: 90vw;
+    }
+    /*-part Formations-*/
+    #TimelineFormation{
+        flex-wrap: wrap;
+    }
+        #TimelineFormation img{
+            height: 20vh;
+            width: 90vw;
+        }
+    /*-Footer-*/
+    footer #Ft{
+        flex-direction: column;
+    }
+    /*-copyright-*/
+    #cp{
+        font-size: 0.8em;
+    }
+}
+
