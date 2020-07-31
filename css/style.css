@@ -45,12 +45,14 @@ header nav ul{
             text-decoration: none;
             color: white;
         }
-/*----Img header----*/
+/*-------Img header---------*/
+/*-img bg-*/
 header img:nth-child(2){
     width: 100%;
     height: 98vh;
     border-bottom-right-radius: 25%;
 }
+/*-my picture-*/
 header img:nth-child(3){
     width: 10vw;
     height: 22vh;
@@ -62,7 +64,7 @@ header img:nth-child(3){
 /*--txt under my picture--*/
 header #MyDescriptionBg{
     position: absolute;
-    top:50vh;
+    top:45vh;
     left:5vw;
     color:rgba(255, 255, 255, 0.808);
     font-size: 2em;
@@ -80,7 +82,7 @@ header #MyDescriptionBg{
 }
 /*----For each tall Title(help nav fixed)----*/
 #Profil,#Competences,#Experiences,#Formations,#Interet{
-    padding:4%;
+    padding:70px;
 }
 /*-----Part Profil----*/
 .MyProfil{
@@ -134,10 +136,6 @@ header #MyDescriptionBg{
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-}
-.Bgcolor{
-    background-color:  #f5f5f7;
-    color: #131313;
 }
 /*-------Part Bancassurance------*/
 #bankInsurance{
@@ -217,12 +215,12 @@ header #MyDescriptionBg{
     height: 20vh;
     background-color: white;
         }
-  /* Timeline
+  /* Timeline Exp
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.timeline ul {
+.timelineExp ul {
     background: #f5f5f7;
 }
-  .timeline ul li {
+  .timelineExp ul li {
     list-style-type: none;
     position: relative;
     width: 6px;
@@ -230,7 +228,7 @@ header #MyDescriptionBg{
     padding-top: 50px;
     background: #f45b68cc;
   }
-    .timeline ul li::after {
+    .timelineExp ul li::after {
       content: '';
       position: absolute;
       left: 50%;
@@ -241,14 +239,14 @@ header #MyDescriptionBg{
       border-radius: 50%;
       background: inherit;
     }
-    .timeline ul li div {       
+    .timelineExp ul li div {       
       position: relative;
       bottom: 0;
       width: 400px;
       padding: 15px;
       background: #F45B69;
     }
-        .timeline ul li div::before {
+        .timelineExp ul li div::before {
           content: '';         
           position: absolute;
           bottom: 7px;
@@ -256,18 +254,18 @@ header #MyDescriptionBg{
           height: 0;
           border-style: solid;
         }
-        .timeline ul li:nth-child(odd) div {
+        .timelineExp ul li:nth-child(odd) div {
           left: 45px;
         }
-        .timeline ul li:nth-child(odd) div::before {
+        .timelineExp ul li:nth-child(odd) div::before {
           left: -15px;
           border-width: 8px 16px 8px 0;
           border-color: transparent #F45B69 transparent transparent;
         }
-        .timeline ul li:nth-child(even) div {
+        .timelineExp ul li:nth-child(even) div {
           left: -439px;
         }
-        .timeline ul li:nth-child(even) div::before {
+        .timelineExp ul li:nth-child(even) div::before {
           right: -15px;
           border-width: 8px 0 8px 16px;
           border-color: transparent transparent transparent #F45B69;
@@ -280,30 +278,30 @@ time {
 }
   /* Effects
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.timeline ul li::after {
+.timelineExp ul li::after {
     transition: background .5s ease-in-out;
 }
-.timeline ul li.in-view::after {
+.timelineExp ul li.in-view::after {
     background: #F45B69;
 }
-  .timeline ul li div {
+  .timelineExp ul li div {
     visibility: hidden;
     opacity: 0;
     transition: all .5s ease-in-out;
     }
-  .timeline ul li:nth-child(odd) div {
+  .timelineExp ul li:nth-child(odd) div {
     transform: translate3d(200px, 0, 0);
     }
-  .timeline ul li:nth-child(even) div {
+  .timelineExp ul li:nth-child(even) div {
     transform: translate3d(-200px, 0, 0);
   }
-  .timeline ul li.in-view div {
+  .timelineExp ul li.in-view div {
     transform: none;
     visibility: visible;
     opacity: 1;
   }
 /*--------Images----------*/
-.timeline img{
+.timelineExp img{
     width: 10vw;
     height: auto;
 }
@@ -517,7 +515,7 @@ footer{
 }
 /*-Scroll Bar -*/
 ::-webkit-scrollbar{
-    background-color:#f5f5f7;
+    background-color:white;
 }
 ::-webkit-scrollbar-thumb{
     background-color: #131313;;
@@ -525,6 +523,13 @@ footer{
   /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*-------Tall laptop------*/
+@media only screen and (min-width:1400px){
+    /*-My Picture-*/
+    header img:nth-child(3){
+        width: 9vw;
+        height: 19vh;
+    }
+}
 @media only screen and (max-width:1400px){
     /*-My Picture-*/
     header img:nth-child(3){
@@ -613,10 +618,10 @@ footer{
 }
 /*------Animation Js Part Experiences-----*/
 @media screen and (max-width: 900px) {
-    .timeline ul li div {
+    .timelineExp ul li div {
       width: 250px;
     }
-    .timeline ul li:nth-child(even) div {
+    .timelineExp ul li:nth-child(even) div {
       left: -289px;
       /*250+45-6*/
     }
@@ -630,7 +635,7 @@ footer{
     /*-My Picture-*/
     header img:nth-child(3){
         top:15vh;
-        width: 15vw;
+        width: 14vw;
         height: 13vh;
     }
     /*-txt under my picture-*/
@@ -685,16 +690,16 @@ footer{
 }
 /*------Animation Js Part Experiences-----*/
 @media screen and (max-width: 600px) {
-    .timeline ul li {
+    .timelineExp ul li {
       margin-left: 20px;
     }
-    .timeline ul li div {
+    .timelineExp ul li div {
       width: calc(100vw - 91px);
     }
-    .timeline ul li:nth-child(even) div {
+    .timelineExp ul li:nth-child(even) div {
       left: 45px;
     }
-    .timeline ul li:nth-child(even) div::before {
+    .timelineExp ul li:nth-child(even) div::before {
       left: -15px;
       border-width: 8px 16px 8px 0;
       border-color: transparent #F45B69 transparent transparent;
@@ -708,7 +713,7 @@ footer{
     }
     /*-My Picture-*/
     header img:nth-child(3){
-        width: 16vw;
+        width: 17vw;
         height: 11vh;
         top:1vh;
         left:4vw;
@@ -764,10 +769,23 @@ footer{
         #language h2{
             margin-top: 10px;
         }
+    /*-icons Part Interests-*/
+    #logoInt i p{
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
     /*-button bottom to the top-*/
     .glow-on-hover{
         display: none;
     }
+    /*-Footer-*/
+    footer{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+        footer #Ft{
+            flex-direction: column;
+        }
     /*-copyright-*/
     #cp{
         margin-top: 10px;
@@ -813,10 +831,14 @@ footer{
             height: 20vh;
             width: 90vw;
         }
-    /*-Footer-*/
-    footer #Ft{
-        flex-direction: column;
+    /*-icons Part Interests-*/
+    #logoInt{
+        height: auto;
     }
+        #logoInt i{
+            margin-top: 10px;
+            height: auto;
+        }
     /*-copyright-*/
     #cp{
         font-size: 0.8em;
